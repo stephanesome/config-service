@@ -40,3 +40,8 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+tasks.bootBuildImage {
+    imageName = project.name
+    environment["BP_JVM_VERSION"] = "17.*"
+}
